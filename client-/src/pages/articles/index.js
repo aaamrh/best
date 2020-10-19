@@ -33,6 +33,7 @@ class Articles extends Component {
       const data = res.data.data;
       const { listData } = this.state;
 
+
       for (let i = 0; i < data.length; i++) {
         let content = data[i].content;
         if(content.replace(/\s+/g, "") === '<p></p>'){
@@ -75,14 +76,15 @@ class Articles extends Component {
           //   },
           //   pageSize: 4,
           // }}
+          
           dataSource={this.state.listData}
           renderItem={item => (
             <List.Item
               key={item.title}
               actions={[
-                <IconText icon={StarOutlined} text={item.mark} key="list-vertical-star-o" />,
-                <IconText icon={LikeOutlined} text={item.like} key="list-vertical-like-o" />,
-                <IconText icon={MessageOutlined} text={item.comment} key="list-vertical-message" />,
+                <IconText icon={StarOutlined} text={item.mark/1000 + 'k'} key="list-vertical-star-o" />,
+                <IconText icon={LikeOutlined} text={item.like + 'k'} key="list-vertical-like-o" />,
+                <IconText icon={MessageOutlined} text={item.comment + 'k'} key="list-vertical-message" />,
               ]}
               // extra={
               //   <img

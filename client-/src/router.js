@@ -16,10 +16,10 @@ class Router extends Component {
       <BrowserRouter>
         <App>
           <Switch>
-            <Route path='/admin' render={()=>
+            <Route path='/maruihua' render={()=>
               <Admin>
-                <Route path='/admin/publish' component={Publish} />
-                <Redirect to="/admin/publish" />
+                <Route path='/maruihua/publish' component={Publish} />
+                <Redirect to="/maruihua/publish" />
               </Admin>
             } />
 

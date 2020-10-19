@@ -23,7 +23,7 @@ const models = {
     'like': {type: Number, require:true},
     'mark': {type: Number, require: true},
     'comment': {type: String, require: true},
-    'type': {type: String, require: true},
+    'type': {type: Array, require: true},
     'source_site': {type:String, require: true}, // 来源: 知乎 bilibili
     'externally': {type:String},                 // 外链代码， bilibil
     'author_name': {type: String, require},

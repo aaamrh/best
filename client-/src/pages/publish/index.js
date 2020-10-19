@@ -93,6 +93,7 @@ class Publish extends Component {
     
     this.props.publish(this.state)
   };
+  
 
   onCheckBox = (checkedValues) => {
     console.log('checked = ', checkedValues);
@@ -113,7 +114,6 @@ class Publish extends Component {
     const { editorState } = this.state;
     return (
       <div>
-        { this.props.state.code===0 ? message.success(this.props.state.msg) : <></> }
         <Form
           {...layout}
           name="basic"

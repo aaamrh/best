@@ -1,5 +1,6 @@
 import axios from "axios"
-import { act } from "react-dom/test-utils"
+import { act } from "react-dom/test-utils";
+import { message } from 'antd';
 
 const PUBLISH_SUCCESS = 'PUBLISH_SUCCESS'
 const ARTICLES_SUCCESS = 'ARTICLES_SUCCESS'
@@ -49,12 +50,16 @@ function articlesSuccess(data){
 // 发布文章
 export function publish(state){
   console.log(state)
-  return ''
+  // return ''
   return dispatch => {
     axios.post('/api/articles/', state).then(res=>{
       const data = res.data;
       if(!data.code){
         dispatch(publishSuccess(res.data))
+        message.info('保存成功');
+      }else{
+        message.info('保存出错');
+
       }
     })
 
