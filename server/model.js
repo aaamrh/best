@@ -1,15 +1,18 @@
-import ENV from './env'
+const ENV = require('./env');
 
 const Mongoose = require('mongoose');
 const db = Mongoose.connection;
+let URL = '';
 
 // Mongoose.connect("mongodb://127.0.0.1:27017/best", {useNewUrlParser: true});
-Mongoose.connect(`mongodb://${ENV.user}:${ENV.pwd}@127.0.0.1:27017/${ENV.db}`, {useNewUrlParser: true});
+
+URL = `mongodb://${ENV.user}:${ENV.pwd}@127.0.0.1:27017/${ENV.db}`
+if(!ENV.user && !ENV.pwd){ URL = `mongodb://127.0.0.1:27017/${ENV.db}`} 
+
+Mongoose.connect(URL, {useNewUrlParser: true});
 
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('数据库链接成功');
-});
+db.once('open', function() { console.log('数据库链接成功') });
 
 
 const models = {
