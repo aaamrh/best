@@ -1,7 +1,10 @@
+import ENV from './env'
+
 const Mongoose = require('mongoose');
 const db = Mongoose.connection;
 
-Mongoose.connect("mongodb://127.0.0.1:27017/best", {useNewUrlParser: true});
+// Mongoose.connect("mongodb://127.0.0.1:27017/best", {useNewUrlParser: true});
+Mongoose.connect(`mongodb://${ENV.user}:${ENV.pwd}@127.0.0.1:27017/${ENV.db}`, {useNewUrlParser: true});
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
