@@ -15,7 +15,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() { console.log('数据库链接成功') });
 
 
-
 const models = {
   user: {
     'tel': {type: String, require: true},
