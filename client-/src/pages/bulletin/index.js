@@ -22,7 +22,7 @@ class Bulletin extends Component {
           <Col span={6}>
             <Link to="/articles/economy" target="_blank">
               <Card hoverable
-                cover={<img alt="" src="/assets/imgs/economy-1.jpg" />}
+                cover={<img alt="" src="/assets/imgs/economy.jpg" />}
                 onClick={this.handleClick}
               >
                 <Meta title="" description="经济" />
@@ -32,7 +32,7 @@ class Bulletin extends Component {
           <Col span={6}>
             <Link to="/articles/documentary" target="_blank">
               <Card hoverable
-                cover={<img alt="" src="/assets/imgs/movie.jpg" />}
+                cover={<img alt="" src="/assets/imgs/movies.jpg" />}
                 onClick={this.handleClick}
               >
                 <Meta title="" description="纪录片" />
