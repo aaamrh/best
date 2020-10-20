@@ -6,8 +6,9 @@ let URL = '';
 
 // Mongoose.connect("mongodb://127.0.0.1:27017/best", {useNewUrlParser: true});
 
-URL = `mongodb://${ENV.user}:${ENV.pwd}@127.0.0.1:27017/${ENV.db}`
+URL = `mongodb://${ENV.user}:${ENV.pwd}@127.0.0.1:27017/${ENV.db}?authSource=admin'`
 if(!ENV.user && !ENV.pwd){ URL = `mongodb://127.0.0.1:27017/${ENV.db}`} 
+
 
 Mongoose.connect(URL, {useNewUrlParser: true});
 

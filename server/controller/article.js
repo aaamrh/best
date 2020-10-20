@@ -35,6 +35,9 @@ const create = async (ctx, next) => {
 const articleList = async (ctx, next) => {
   try {
     const doc = await Article.find({type: ctx.params.type}, _filter)
+
+    console.log(doc)
+
     ctx.body={
       code: 0,
       data: doc
