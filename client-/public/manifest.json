@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "大吃一鲸",
+  "name": "大吃一鲸， 拓展你的认知",
+  "description": "吃鲸， 大吃一鲸， 大吃一惊， 提升， 励志， 学习",
   "icons": [
     {
       "src": "favicon.ico",
