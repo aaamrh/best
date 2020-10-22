@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {Button, Layout, Menu, Breadcrumb } from 'antd'
+import {Button, Layout, Menu, Breadcrumb } from 'antd';
+import { Link } from "react-router-dom";
+
 import '../../css/common.scss'
 import './index.scss'
 
@@ -15,9 +17,7 @@ class index extends Component {
           <Header>
             <div className="logo" />
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-              {/* <Menu.Item key="1">nav 1</Menu.Item>
-              <Menu.Item key="2">nav 2</Menu.Item>
-              <Menu.Item key="3">nav 3</Menu.Item> */}
+                <Link to="/navigation" target="_blank"> 私藏的很哇塞的网站 </Link>
             </Menu>
           </Header>
           <Content style={{ padding: '50px 50px 0' }}>
