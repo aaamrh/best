@@ -1,0 +1,88 @@
+@import '../../css/default.scss';
+
+@mixin center-bgwhite {
+  box-shadow: 0 1px 3px rgba(26,26,26,.1);
+  background: #fff;
+}
+
+.m-nav{
+  font-size: 14px;
+  padding-top: 10px;
+  background: url('/assets/imgs/nav-bg.jpg') 0 0/100%;
+  overflow: hidden;
+  
+  .nav-notice{
+    @include center-bgwhite;
+
+
+    padding: 10px;
+  }
+  .nav-wrap{
+    @include center-bgwhite;
+    width: 80%;
+    margin: 10px auto 25px;
+    padding: 10px 20px;
+    overflow: hidden;
+    .domain{
+      padding: 10px 20px 10px 0;
+      border-bottom: 1px solid #f1f3f5;
+    }
+    .nav-list{
+      padding: 10px 0;
+      .subject{
+        float: left;
+        text-align: center;
+        width: 100px;
+        background: #000;
+        color: #fff;
+        padding: 0 10px;
+        line-height: 35px;
+      }
+      .navs{
+        margin-left: 130px;
+        li{
+          display: inline-block;
+          margin-right: 10px;
+          border-radius: 4px;
+        }
+        .nav{
+          a{
+            display: block;
+            text-decoration: none;
+            color: #333;
+            line-height: 35px;
+            padding: 0 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+              animation: index-link-active .75s cubic-bezier(.315,.605,.375,.925) forwards;
+              background: $colorW;
+              color: #fff;
+              transition: .3s
+            }
+          }
+        }
+      }
+    }
+    }
+    
+}
+
+
+@keyframes index-link-active {
+  0% {
+      -webkit-transform: perspective(2000px) rotateX(0) rotateY(0) translateZ(0);
+      transform: perspective(2000px) rotateX(0) rotateY(0) translateZ(0)
+  }
+
+  16% {
+      -webkit-transform: perspective(2000px) rotateX(10deg) rotateY(5deg) translateZ(32px);
+      transform: perspective(2000px) rotateX(10deg) rotateY(5deg) translateZ(32px)
+  }
+
+  to {
+      -webkit-transform: perspective(2000px) rotateX(0) rotateY(0) translateZ(65px);
+      transform: perspective(2000px) rotateX(0) rotateY(0) translateZ(65px)
+  }
+}
+

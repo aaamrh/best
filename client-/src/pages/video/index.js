@@ -16,12 +16,17 @@ export default class IVideo extends Component {
 
     Axios.get(`/api/video/${this.props.match.params.id}`)
     .then(res=>{
-      console.log(res)
-      this.setState({
-        externally: res.data.data.externally
-      })
+      console.log(res, res.data.data.externally)
+      let externally = res.data.data.externally;
 
+      externally = externally.split('page=1')
+
+      externally = externally[0]+'page=1&&high_quality=1'+externally[1];
+      console.log(externally)
       
+      this.setState({
+        externally
+      })
     })
 
     // var body = iframe.contentWindow.document.body;

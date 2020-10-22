@@ -7,6 +7,7 @@ import Articles from './pages/articles';
 import Admin from './pages/admin';
 import Publish from './pages/publish';
 import IVideo from './pages/video';
+import Navigation from './pages/navigation';
 
 import './css/common.scss'
 
@@ -22,6 +23,8 @@ class Router extends Component {
                 <Redirect to="/maruihua/publish" />
               </Admin>
             } />
+
+            <Route path='/navigation' component={Navigation} />
 
             <Route path='/' render={()=> 
               <User>

@@ -25,7 +25,7 @@ class index extends Component {
               {this.props.children}
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>XXX ©2018 Created by XXX</Footer>
+          <Footer style={{ textAlign: 'center' }}>© 2020</Footer>
         </Layout>
       </div>
     );
