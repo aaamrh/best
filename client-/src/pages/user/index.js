@@ -25,7 +25,13 @@ class index extends Component {
               {this.props.children}
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>© 2020</Footer>
+          <Footer style={{ textAlign: 'center' }}>
+            <div className="m-foot">
+              很哇塞的网站：
+              <a href="http://www.ruanyifeng.com/blog" target="_blank"> 阮一峰的个人网站 </a>
+              <a href="https://www.zhangxinxu.com" target="_blank"> 张鑫旭 </a>
+            </div>
+          </Footer>
         </Layout>
       </div>
     );
