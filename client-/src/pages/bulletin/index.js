@@ -15,6 +15,10 @@ class Bulletin extends Component {
     console.log(ev, ev.target)
   }
 
+  componentDidMount(){
+  }
+
+
   render() {
     return (
       <div className="site-card-wrapper container">
