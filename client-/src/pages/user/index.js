@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import '../../css/common.scss'
 import './index.scss'
 
-
 const { Header, Content, Footer } = Layout;
-
 
 class index extends Component {
   render() {
